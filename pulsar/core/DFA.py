@@ -13,23 +13,8 @@ def delta(state, obs):
     else:
         newObs = [obs]
     return "|".join(newObs)
+#fdsafdsa
 
-# m = lens.MarkovModel("data/robot.markovModel")
-# d = DFA.prismaModel2DFA(m.getSimplifiedModel())
-# equi = d.minimize()
-# [['BASE.UAS|END'],
-# ['CARRY.UAC|BASE.UAS'],
-# ['BASE.UAS|GO.UAC', 'FREE.UAS|GO.UAC', 'START|GO.UAC', 'WALL.UAS|GO.UAC'],
-# ['GO.UAC|WALL.UAS', 'GO.UAC|BASE.UAS', 'GO.UAC|FREE.UAS', 'START|START'],
-# ['BROKEN_END'],
-# ['FREE.UAS|CARRY.UAC', 'OBJECT.UAS|CARRY.UAC'],
-# ['WALL.UAS|CARRY.UAC'],
-# ['CARRY.UAC|FREE.UAS', 'GO.UAC|OBJECT.UAS'],
-# ['CARRY.UAC|WALL.UAS']]
-# m.exportMarkovMartrix("data/robot.markovMatrix")
-# in R:
-# m = read.table("data/robot.markovMatrix", sep="\t", header=TRUE)
-# m[c('GO.UAC|WALL.UAS', 'GO.UAC|BASE.UAS', 'GO.UAC|FREE.UAS', 'START|START'), ]
 def prismaModel2DFA(model):
     # gather the states
     allStates = model.copy()
